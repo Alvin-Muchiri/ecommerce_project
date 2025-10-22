@@ -11,3 +11,17 @@ def home(request):
 
 def about(request):
     return render(request,"about.html")
+
+def shoppinglist(request):
+    context = {
+    "shoppinglist":["Milk", "Eggs", "Butter"]    
+    }
+    return render(request, "shoppinglist.html",context)
+
+
+def dashboard(request):
+    context = {
+        "user_name":"Jane",
+        "is_admin":False
+    }
+    return render(request,"dashboard.html", context)
